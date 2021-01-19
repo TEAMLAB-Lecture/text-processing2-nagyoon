@@ -70,9 +70,16 @@ def to_camel_case(underscore_str):
             >>> tp2.to_camel_case(underscore_str3)
             "alreadyCamel"
     """
+
+    if '_' not in underscore_str:
+      return underscore_str
+
+    if '_' not in unserscore
     var_lst = underscore_str.replace('_', ' ').split()
+
     if not len(var_lst):
       return ""
+      
     camelcase_str = var_lst[0].lower()
     for var in var_lst[1:]:
       camelcase_str+=var.title()
